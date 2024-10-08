@@ -71,6 +71,7 @@ column_intensity_to_label = function(col) {
 #' @param contr_lbl optionally a string describing a contrast, e.g. "contrast: WT vs KO"
 get_column_intensity = function(peptides, contr_lbl = NA) {
   ref = c("filter by contrast" = paste0("intensity_", contr_lbl),
+          "filter by group" = "intensity_by_group",
           "global data filter" = "intensity_all_group",
           "custom filtering and normalization" = "intensity_norm",
           "input data as-is" = "intensity")
